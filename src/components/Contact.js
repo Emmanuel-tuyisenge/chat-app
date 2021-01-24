@@ -14,7 +14,7 @@ function Contact(props) {
                 </div>
                 <small className="status">
                     <status className={props.online ? 'status-online' : 'status-offline'}></status>
-                    <status className="status-text">{props.status}</status>
+                    <status className="status-text">{props.online ? 'online' : 'offline'}</status>
                 </small>
             </div>
         </div>
@@ -24,7 +24,7 @@ function Contact(props) {
 Contact.prototypes = {
   image: PropTypes.string,
   name: PropTypes.string,
-  status: PropTypes.bool,
+  online: PropTypes.bool,
 
 }
 
